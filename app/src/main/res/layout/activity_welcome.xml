@@ -112,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="28dp"
         android:text="@string/rule5"
         android:textAlignment="center"
         android:textSize="24sp"

@@ -24,10 +24,6 @@ public class GameActivity extends AppCompatActivity {
         computerMoveDisplay = findViewById(R.id.player2MoveDisplay);
         resultsDisplay = findViewById(R.id.resultDisplay);
 
-        View rockButton     = findViewById(R.id.rockButton);
-        View paperButton    = findViewById(R.id.paperButton);
-        View scissorButton  = findViewById(R.id.scissorsButton);
-
         game = new Game();
 
     }
