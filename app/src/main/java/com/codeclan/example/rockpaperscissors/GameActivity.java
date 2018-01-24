@@ -11,7 +11,7 @@ public class GameActivity extends AppCompatActivity {
 
     Game        game;
     TextView    player1Display;
-    TextView    player2Display;
+    TextView    computerMoveDisplay;
     TextView    resultsDisplay;
 
     @Override
@@ -20,9 +20,9 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        View player1Display = findViewById(R.id.player1MoveDisplay);
-        View player2Display = findViewById(R.id.player2MoveDisplay);
-        View resultsDisplay = findViewById(R.id.resultDisplay);
+        player1Display = findViewById(R.id.player1MoveDisplay);
+        computerMoveDisplay = findViewById(R.id.player2MoveDisplay);
+        resultsDisplay = findViewById(R.id.resultDisplay);
 
         View rockButton     = findViewById(R.id.rockButton);
         View paperButton    = findViewById(R.id.paperButton);
@@ -37,8 +37,9 @@ public class GameActivity extends AppCompatActivity {
         Button viewButton   = (Button) view;
 
         Move        player1Move;
-        Move        player2Move;
+        Move        computerMove;
         GameResult  gameResult;
+        String      resultDisplayText;
 
         String chosenMove   = viewButton.getText().toString().toLowerCase();
 
@@ -51,12 +52,23 @@ public class GameActivity extends AppCompatActivity {
             player1Move     = Move.SCISSORS;
         }
 
+        computerMove = game.getRandomMove();
 
-        player2Move = game.getRandomMove();
+        gameResult  = game.getResult(player1Move, computerMove);
 
-        gameResult  = game.getResult(player1Move, player2Move);
+        if (gameResult.equals(GameResult.DRAW)){
+            resultDisplayText = "It's a draw!";
+        } else if (gameResult.equals(GameResult.PLAYER1)){
+            resultDisplayText = "You won!";
+        } else {
+            resultDisplayText = "The computer won :(";
+        }
 
 
-        
+
+        player1Display.setText(player1Move.toString().toLowerCase());
+        computerMoveDisplay.setText(computerMove.toString().toLowerCase());
+        resultsDisplay.setText(resultDisplayText);
+
     }
 }
