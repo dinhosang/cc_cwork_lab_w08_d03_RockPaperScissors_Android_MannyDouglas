@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Rock Paper Scissors</string>
+    <string name="rule1">1) Click Play to begin</string>
+    <string name="rule2">2) Rock beats Scissors</string>
+    <string name="rule3">3) Scissors beats Paper</string>
+    <string name="rule4">4) Paper beats Rock</string>
+    <string name="rule5">Which will you pick?</string>
 </resources>

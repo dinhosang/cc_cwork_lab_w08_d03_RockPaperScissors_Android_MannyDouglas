@@ -66,8 +66,8 @@ public class GameActivity extends AppCompatActivity {
 
 
 
-        player1Display.setText(player1Move.toString().toLowerCase());
-        computerMoveDisplay.setText(computerMove.toString().toLowerCase());
+        player1Display.setText("Your move was:   " + player1Move.toString());
+        computerMoveDisplay.setText("The computer's move was:   " + computerMove.toString());
         resultsDisplay.setText(resultDisplayText);
 
     }

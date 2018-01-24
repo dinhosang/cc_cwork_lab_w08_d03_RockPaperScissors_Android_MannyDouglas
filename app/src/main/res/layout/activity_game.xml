@@ -15,7 +15,7 @@
         android:layout_marginTop="40dp"
         android:text="Choose your move!"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,8 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:background="@drawable/rock"
         android:onClick="getGameResultOnClick"
         android:text="Rock"
+        android:textColor="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/paperButton" />
 
@@ -37,8 +39,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
+        android:background="@drawable/paper"
         android:onClick="getGameResultOnClick"
         android:text="Paper"
+        android:textColor="@android:color/transparent"
         app:layout_constraintEnd_toStartOf="@+id/scissorsButton"
         app:layout_constraintStart_toEndOf="@+id/rockButton"
         app:layout_constraintTop_toBottomOf="@+id/chooseMove" />
@@ -48,8 +52,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
+        android:background="@drawable/scissors"
         android:onClick="getGameResultOnClick"
         android:text="Scissors"
+        android:textColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/paperButton" />
 
@@ -61,6 +67,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +81,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player1MoveDisplay" />
@@ -86,6 +94,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player2MoveDisplay" />
